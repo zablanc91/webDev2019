@@ -1,0 +1,129 @@
+/* starting with mobile first design: vertical columns */
+
+/* basic universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee;
+}
+
+main {
+    max-width: 950px;
+    margin: auto;
+}
+
+header {
+    background: #fff;
+    width: 100%;
+    height: auto;
+}
+
+#heading-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#heading-image {
+    background: url(images/tricot-header.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    margin: 0;
+}
+
+#heading-text h1, h2 {
+    font-weight: 400;
+}
+
+#heading-text h1 {
+    font-size: 2.5rem;
+}
+
+#heading-text h2 {
+    font-size: 1.25rem;
+}
+
+.link-btn {
+    text-decoration: none;
+    color: #444;
+}
+
+.link-btn:hover {
+    color:#777;
+}
+
+#disco {
+    text-align: center;
+}
+
+#disco > * {
+    margin-bottom: 1rem;
+}
+
+#disco-header {
+    padding: 2rem;
+    background-color: #444;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+}
+
+#disco img {
+    width: 90%;
+    border: 1px solid #333;
+}
+
+.caption {
+    padding: 0.7rem;
+}
+
+.caption ol {
+    display: inline-block;
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+    margin: 2rem;
+    margin-bottom: 0;
+    color: #333;
+}
+
+footer > * {
+    margin-bottom: 1.25rem;
+}
+
+#media-links > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#media-links img {
+    width: 30px;
+}
+
+@media(min-width: 600px){
+    header {
+        display: flex;
+        height: 100%;
+    }
+
+    #heading-text {
+        height: 100vh;
+        flex: 0 1 20vw;
+    }
+
+    #heading-image {
+        height: 100vh;
+        flex: 0 1 80vw;
+    }
+}
