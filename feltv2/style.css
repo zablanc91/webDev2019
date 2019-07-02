@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 300 16px/22px "Lato", Helvetica;
+    overflow-x: hidden;
+}
+
+nav {
+    min-height: 8vh;
+    color: #a39c91;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0eeeb;
+    border-bottom: 1px solid #cbc9c7;
+}
+
+.logo {
+    letter-spacing: 2px;
+    font-size: 20px;
+    
+    
+}
+
+/* remove nav-links from flow and outside of view until burger is clicked */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    right: 0px;
+    top: 8vh;
+    height: 92vh;
+    background-color: #f0eeeb;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    width: 35%;
+}
+
+.nav-links li {
+    list-style: none;
+    opacity: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a39c91;
+}
+
+.burger {
+    display: block;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #a39c91;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* apply this class to nav with JS after clicking burger to bring it back to view */
+.nav-active {
+    transform: translateX(0%);
+}
+
+/* animation to apply to links via JS so they fade in  */
+@keyframes navLinkFadeIn {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* to change the appearance of burger when you click it, three lines to an X */
+.burger-active .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-active .line2{
+    opacity: 0;
+}
+
+.burger-active .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* for tablet and larger, get rid of burger and display nav-links */
+@media screen and (min-width: 768px) {
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        position: static;
+        transform: translateX(0%);
+        right: 0;
+        top: 0;
+        height: 8vh;
+    }
+
+    .nav-links li {
+        opacity: 1;
+    }
+
+    .burger {
+        display: none;
+    }
+}
