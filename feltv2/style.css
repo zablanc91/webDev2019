@@ -31,11 +31,12 @@ nav {
 }
 
 .logo {
-    letter-spacing: 2px;
-    font-size: 20px;
-    
-    
+    font-size: 30px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-weight: 150;
 }
+
 
 /* remove nav-links from flow and outside of view until burger is clicked */
 .nav-links {
@@ -136,6 +137,69 @@ nav {
     border:	1px solid #bbb;
     display: inline-block;
     margin: 8px;
+}
+
+
+/*
+  ========================================
+  Posts
+  ========================================
+*/
+
+.posts {
+    display: flex;
+}
+
+.posts-left {
+    width: 40vw;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.posts-left h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.posts-left p {
+    font-size: 16px;
+}
+
+.posts-right {
+    width: 60vw;
+    border-left: 1px solid #ccc;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.posts-right > * {
+    margin-bottom: 12px;
+}
+
+.posts-right h2{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+iframe {
+    height: 250px;
+}
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+
+footer {
+    color: #a39c91;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-logo {
+    color: black;
 }
 
 
